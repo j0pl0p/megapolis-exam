@@ -10,7 +10,6 @@ def date_to_seconds(s):
     :param s: дата в формате ГГГГ-ММ-ДД
     :return: приблизительное кол-во секунд с 0000-00-00
     """
-
     year, month, day = map(int, s.split('-'))
     return 60 * 60 * 24 * 365 * year + 60 * 60 * 24 * 30 * month + 60 * 60 * 24 * day
 
