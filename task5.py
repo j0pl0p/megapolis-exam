@@ -7,10 +7,10 @@ def make_hash(name):
     :param name: имя пользователя
     :return: хэш
     """
-    table = list(range(1024)) # создаём таблицу перестановок
-    random.shuffle(table) # перемешиваем
-    total_hashes = 0 # сумма хэшей
-    for symbol in name: # проходимся по сиволам и складываем их хэши
+    table = list(range(1024))  # создаём таблицу перестановок
+    random.shuffle(table)  # перемешиваем
+    total_hashes = 0  # сумма хэшей
+    for symbol in name:  # проходимся по сиволам и складываем их хэши
         index = ord(symbol) % 1024
         total_hashes += table[index]
     return total_hashes % 2048
